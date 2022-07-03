@@ -37,16 +37,6 @@ const Home = () => {
 
     }
 
-    const addTodo = title => {
-        setTodos([
-            ...todos,
-            {
-                _id: new Date(),
-                title,
-                isCompleted: false,
-            },
-        ])
-    }
 
     return (
         <div className='text-white w-4/5 mx-auto'>
@@ -54,7 +44,7 @@ const Home = () => {
             {todos.map(todo => (
                 <TodoItem key={todo._id} todo={todo} changeTodo={changeTodo} removeTodo={removeTodo} />
             ))}
-            <CreateTodoField addTodo={addTodo}/>
+            <CreateTodoField setTodos={setTodos}/>
         </div>
     )
 
