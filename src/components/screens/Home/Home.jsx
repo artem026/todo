@@ -5,17 +5,22 @@ import CreateTodoField from './create-todo-field/CreateTodoField'
 const data = [
 {
     _id: 'wefw23',
-    title:'Finish the essay coloboration',
+    title:'Оплатить налоги',
     isCompleted: false,
 },
 {
     _id: 'wefw24',
-    title:'Read next chapter of the book',
+    title:'Заменить датчик положения коленвала',
     isCompleted: false,
 },
 {
     _id: 'wefw25',
-    title:'Send the finished assigment',
+    title:'Продлить страховку ДОМ.РФ',
+    isCompleted: false,
+},
+{
+    _id: 'wefw26',
+    title:'Показания счетчиков 18-23 число месяца',
     isCompleted: false,
 },
 ]
