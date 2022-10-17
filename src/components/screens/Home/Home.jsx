@@ -25,6 +25,8 @@ const data = [
 },
 ]
 
+const yeardate = [76]
+
 
 const Home = () => {
     const [todos, setTodos] = useState(data)
@@ -42,10 +44,27 @@ const Home = () => {
 
     }
 
+    // const [rates, setRates] = React.useState({});
+
+    // React.useEffect(() => {
+    //     fetch('https://cdn.cur.su/api/latest.json')
+    //         .then((res) => res.json())
+    //         .then((json) => {
+    //             setRates(json.rates);
+    //             console.log(json.rates);
+    //         }).catch((err) => {
+    //             console.warn(err);
+    //             alert('не удалось получить курсы валют');
+    //         });
+    // }, []);
+
 
     return (
         <div className='text-white w-4/5 mx-auto'>
-            <h1 className='text-2xl font-bold text-center mb-10'>Todo sim</h1>
+            <h3 className='new-year-day '>До сдачи дома осталось {yeardate} дней</h3>
+            <h1 className='text-2xl font-bold text-center mb-10'>Весь список задач</h1>
+            {/* <h3 className='rates'>курс {rates}</h3> */}
+            {/* <Block /> */}
             {todos.map(todo => (
                 <TodoItem key={todo._id} todo={todo} changeTodo={changeTodo} removeTodo={removeTodo} />
             ))}
