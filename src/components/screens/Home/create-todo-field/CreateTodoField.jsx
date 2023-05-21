@@ -7,13 +7,13 @@ const CreateTodoField = ({setTodos}) => {
     
     const addTodo = title => {
         setTodos(prev => [
-            
+            ...prev,
             {
                 _id: new Date(),
                 title,
                 isCompleted: false,
             },
-            ...prev,
+            
         ])
         setTitle('') 
     }
